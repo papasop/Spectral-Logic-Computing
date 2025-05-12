@@ -1,38 +1,33 @@
-# Spectral Computing  
-**Logic and Memory in Frequency-Driven Modal Systems**
 
----
+# 🔁 Spectral Logic Memory Simulation (谱计算记忆模拟)
 
-This repository implements a programmable spectral computer prototype, where logic, memory, and control flow are driven entirely by modal interference of frequency-structured waveforms φ(t).
+This repository implements a physically inspired simulation of **programmable spectral computing**, following the theoretical framework of modal slot logic, entropy feedback, and noncommutative kernel interactions as described in advanced spectral computing models.
 
-Unlike classical computers based on transistors or quantum computers based on entanglement, spectral computing relies on frequency density, phase control, and waveform locking to encode information and execute logic.
+## 🔬 Features
 
-## 🔬 Core Concepts
+✅ Frequency-slot based memory activation and freezing  
+✅ Entropy H(t) calculation and feedback control  
+✅ Interference using a noncommutative kernel \( K(z, z') \)  
+✅ Dynamic optimization via structure energy function \( L[\phi] \)  
+✅ Noise-injected modal environment for robustness testing  
+✅ YAML-style modal scheduling
 
-- **φ(t)**: Modal field constructed from a sum of cos(√λₙ t + θₙ) terms  
-- **Δf**: Frequency spacing between modal components determines logic state  
-  - Small Δf → Destructive interference → Frozen (logic 0)  
-  - Large Δf → Active oscillation → Logic 1  
-- **S(t)**: Selector function for IF/LOOP/MUX control  
-- **Spectral RAM**: Each memory slot φ_slot[i] is an independently addressable modal channel
+## 📈 Output
 
-## 📁 Features
+Running the main script `p.py` will produce a 4-panel graph:
 
-- ✅ Spectral logic gates (AND, OR, XOR, MUX)  
-- ✅ Finite-State Machine (FSM) using modal states  
-- ✅ Spectral RAM with addressable slots and WRITE/READ mechanism  
-- ✅ Spectral Instruction Language (SIL) compiler from YAML  
-- ✅ Time-structured φ_output(t) execution with programmable clock
+1. **ϕ(t)**: Combined modal output signal  
+2. **S(t)**: Modal control signals per slot  
+3. **H(t), IF(t)**: Structural entropy and modal variance rate  
+4. **L[ϕ]**: The spectral optimization function (entropy + interference + modal variance)
 
-## 🧪 Experimental Verification
 
-- Reproduces frequency-density phase transitions predicted in Spectral Logic Computing via Frequency-Density Phase Transitions in Noncommutative Modal https://doi.org/10.5281/zenodo.15363265
-- Observes logic transitions via variance and spectral entropy of φ(t)
-- Confirms freezing behavior for Δf < 0.3 and active states for Δf > 0.5
 
-## 📦 Installation
+> Example snapshot from `p.py` execution:
+> - Spectral slot 0: Active → Frozen  
+> - Spectral slot 1 & 3: Staggered activation  
+> - Frozen slots retain exact modal value (memory behavior)  
+> - Entropy feedback suppresses unstable modal behavior  
+> - Optimization function L[ϕ] reflects system tension
 
-```bash
-git clone https://github.com/your_username/spectral-computing
-cd spectral-computing
-pip install numpy matplotlib scipy pyyaml
+https://zenodo.org/records/15384932
